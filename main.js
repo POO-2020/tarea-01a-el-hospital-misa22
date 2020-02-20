@@ -1,5 +1,6 @@
 import Nombre from "./nombre.js";
 import Fecha from "./fecha.js";
+import Tiempo from "./tiempo.js";
 const nombre1 = new Nombre("Eduardo Misael","Solano","Rolon");
 const probarNombre = _ => console.log(nombre1.getNombreCompleto());
 probarNombre();
@@ -18,4 +19,10 @@ const probarFecha = _ =>
         fecha1.getSemanas()
     );
     probarFecha();
-    
+    const tiempo1 = new Tiempo(10,25,"PM");
+    const probarTiempo = _ => 
+    console.log(
+        tiempo1.getFormato12(),
+        tiempo1.getFormato24()
+    )
+    probarTiempo();
