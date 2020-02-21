@@ -4,6 +4,7 @@ import Tiempo from "./tiempo.js";
 import Paciente from "./paciente.js";
 import Doctor from "./doctor.js";
 import Cita from "./cita.js";
+import Hospital from "./hospital.js";
 const nombre1 = new Nombre("Eduardo Misael","Solano","Rolon");
 const nombre2 = new Nombre("Ximena","Solano","Rolon");
 const probarNombre = _ => console.log(nombre1.getNombreCompleto());
@@ -39,3 +40,12 @@ const probarFecha = _ =>
     const cita1 = new Cita(fecha1,tiempo1,doctor1,paciente1);
     const probarCita = _ => console.log(cita1.getCita());
     probarCita();
+    const hospita1 = new Hospital("Imms 1","Villa de alvarez")
+    const probarHospital = _ => {
+        hospita1.registrarDoctor(doctor1);
+        hospita1.listarDoctores();
+        hospita1.registrarCita(cita1);
+        hospita1.listarCitas();
+    
+    }
+    probarHospital();
