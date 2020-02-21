@@ -2,6 +2,7 @@ import Nombre from "./nombre.js";
 import Fecha from "./fecha.js";
 import Tiempo from "./tiempo.js";
 import Paciente from "./paciente.js"
+import Doctor from "./doctor.js";
 const nombre1 = new Nombre("Eduardo Misael","Solano","Rolon");
 const probarNombre = _ => console.log(nombre1.getNombreCompleto());
 probarNombre();
@@ -30,3 +31,6 @@ const probarFecha = _ =>
     const paciente1 = new Paciente(nombre1,fecha1,3121838023);
     const probarPaciente = _ => console.log(paciente1.getPerfil());
     probarPaciente();
+    const doctor1= new Doctor(nombre1,"cirugano",3121839801,"5asdf5660");
+    const probarDoctor = _ => console.log(doctor1.getPerfil());
+    probarDoctor();
