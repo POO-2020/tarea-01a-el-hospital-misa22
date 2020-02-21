@@ -1,22 +1,23 @@
 import Doctor from "./doctor.js";
 import Cita from "./cita.js";
 
-export default class Hospital{
+export default class Hospital {
     /**
      * @param {string} nombre "nombre del hospital";
      * @param {string} direccion "Direccion del hospital"
      */
-    constructor(nombre,direccion){
+    constructor(nombre, direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.doctores = [];
         this.citas = [];
     }
-     /**
-     * @param {string} doctor 
-     */
-    registrarDoctor = doctor => this.doctores.push(doctor);
-
+    /**
+    * @param {string} doctor 
+    */
+    registrarDoctor(doctor) {
+         this.doctores.push(doctor);
+    }
     listarDoctores = _ => this.doctores.forEach(d => console.log(d.getPerfil(), '\n'));
 
     /**
